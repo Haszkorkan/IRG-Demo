@@ -1,0 +1,43 @@
+// Lists
+
+
+$listing-items-padding: $line-height-base/6
+
+// Ordered/Unordered list
+ul:not([class]),
+ol:not([class])
+  margin: 0 0 $paragraphs-margin
+  li:not([class])
+    padding: $listing-items-padding 0
+    ul,
+    ol
+      margin: $listing-items-padding 0 0
+
+// Unordered list
+ul:not([class])
+  padding-left: 0px
+  li:not([class])
+    position: auto
+ul li
+  list-style: disc inside
+
+
+
+
+//Ordered list
+ol:not([class])
+  -webkit-padding-start: 30px
+
+// Description list
+dl
+  margin: 0 0 $paragraphs-margin
+  dt,
+  dd
+    padding: $line-height-base/6 0
+  dt
+    float: left
+    clear: left
+    width: 30%
+  dd
+    width: 70%
+    margin-left: 30%

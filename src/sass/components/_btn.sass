@@ -1,0 +1,61 @@
+// Button
+//
+// Button in various color and size versions.
+
+
+// Block
+// --------------------------------------------------
+.btn
+  background-color: $orange
+  color: white
+  padding: 5px 25px 5px 25px
+  font-family: $font-family-base
+  font-weight: $font-weight-bold
+  font-size: 13px
+  letter-spacing: 0.05em
+  border: 2px solid
+  border-color: $orange
+  border-radius: 0px
+  white-space: nowrap
+  cursor: pointer
+  display: inline-block
+  width: auto
+  height: auto
+  box-sizing: border-box
+
+  &:hover, &:focus
+    transition: color 250ms, border-color 250ms, background 250ms
+    background: transparent
+.btn + .btn
+  margin-left: 15px
+
+button,
+input[type="button"],
+input[type="submit"]
+  @extend .btn
+  margin-top: 30px
+
+
+// Modifiers
+// --------------------------------------------------
+.btn--block
+  width: 100%
+  display: block
+  max-width: none
+  text-align: center
+  & + &
+    margin: 25px 0 0
+
+.btn--xs
+  padding: 3px 10px 4px
+
+.btn--sm
+  padding: 7px 20px 9px
+
+.btn--lg
+  padding: 15px 35px
+  border-radius: 30px
+
+.btn--disabled
+  opacity: 0.15
+  cursor: not-allowed

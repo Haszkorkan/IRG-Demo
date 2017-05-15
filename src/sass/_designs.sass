@@ -1,0 +1,71 @@
+//
+// Designs display on page  - pixel perfect tests
+// --------------------------------------------------
+
+
+// Displays designs on the prototype ass full page overlay.
+// Uncomment importing of this file in app.sass to compare prepared markup and
+// stylesheets with the graphical designs. With this simple tool you can perform
+// pixel-perfect tests.
+//
+// Store designs in `designs`folder in jpg/png extensions and paste its
+// URL into modifiers there.
+//
+// Add following code at the end of the compared html file
+// (ex. src/index.html):
+// <div class="designs designs--name"></div>
+
+$designs-width: 1600px
+
+
+// Component
+// --------------------------------------------------
+.design-toggler
+  position: fixed
+  bottom: 0
+  right: 0
+  padding: 7px
+  text-align: center
+  background-color: $gray-base
+  border-top-left-radius: 3px
+  z-index: 1000
+
+// Affect the page only if 'show-designs' body class is present.
+// This class is toggled by .design-toggler checkbox at the right-bottom corner
+// of the page. See js/design-toggler.js.
+.show-designs
+  .designs
+    position: absolute
+    top: 0
+    left: 50%
+    height: 9999px
+    width: $designs-width
+    margin: 0 (-$designs-width/2)
+    background-position: top
+    background-size: contain
+    background-repeat: no-repeat
+    z-index: -100
+  header,
+  main,
+  *[class^="layout"],
+  *[class*=" layout"],
+  footer
+    opacity: 0.6
+
+
+  // Page Modifiers
+  // --------------------------------------------------
+  // Create a modifier for each html page.
+  // Stay consistent to html file name to avoid chaos.
+  .designs--index
+    background-image: url('../../src/designs/irg_intranet_irg.jpg')
+  .designs--aboutus
+    background-image: url('../../src/designs/irg_homepage_aboutus.jpg')
+  .designs--calendar
+    background-image: url('../../src/designs/irg_intranet_calendar_single.jpg')
+  .designs--document-library
+    background-image: url('../../src/designs/irg_intranet_document_library.jpg')
+  .designs--intranet-berec
+    background-image: url('../../src/designs/irg_intranet_berec.jpg')
+  .designs--myirg
+    background-image: url('../../src/designs/irg_intranet_myirg.jpg')

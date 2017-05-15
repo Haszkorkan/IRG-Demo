@@ -1,0 +1,30 @@
+// Section header
+// --------------------------------------------------
+// .layout--header
+
+.layout--header__branding
+  background-color: white
+  height: 70px
+  +breakpoint(tablet)
+    height: 100px
+
+.layout--header__img
+  background:
+    color: $brand-primary-light
+    image: url('../images/header.jpg')
+    position: top left
+    size: cover
+    repeat: no-repeat
+  height: 150px
+  position: relative
+
+.layout--header__img-title
+  color: #fff
+  padding-top: 60px
+  text-align: left
+  display: inline-block
+  position: absolute
+
+.layout--header__nav
+  background-color: white
+  text-align: center

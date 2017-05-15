@@ -1,0 +1,109 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "fronthack-repo",
+        "scope": null,
+        "escapedName": "fronthack-repo",
+        "name": "fronthack-repo",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Pe/Sites/irg_prototypes"
+    ]
+  ],
+  "_from": "fronthack-repo@latest",
+  "_id": "fronthack-repo@2.1.12",
+  "_inCache": true,
+  "_location": "/fronthack-repo",
+  "_nodeVersion": "6.9.5",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/fronthack-repo-2.1.12.tgz_1492700766884_0.7912014503963292"
+  },
+  "_npmUser": {
+    "name": "frontcraft",
+    "email": "michal@kokocinski.me"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "fronthack-repo",
+    "scope": null,
+    "escapedName": "fronthack-repo",
+    "name": "fronthack-repo",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/fronthack-repo/-/fronthack-repo-2.1.12.tgz",
+  "_shasum": "24446f01e8675f9fa780849c66d06f9cb6670e6a",
+  "_shrinkwrap": null,
+  "_spec": "fronthack-repo",
+  "_where": "/Users/Pe/Sites/irg_prototypes",
+  "author": {
+    "name": "Michal Kokocinski",
+    "email": "michal@kokocinski.me",
+    "url": "http://kokocinski.me"
+  },
+  "bugs": {
+    "url": "https://github.com/frontcraft/fronthack-repo/issues"
+  },
+  "dependencies": {},
+  "description": "Repository with a file structure, which is served by the Fronthack CLI",
+  "devDependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-livereload": "~3.8.1",
+    "gulp-mustache": "~2.3.0",
+    "gulp-rename": "~1.2.2",
+    "gulp-sass": "~3.1.0",
+    "gulp-watch": "~4.3.11",
+    "sc5-styleguide": "~1.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "24446f01e8675f9fa780849c66d06f9cb6670e6a",
+    "tarball": "https://registry.npmjs.org/fronthack-repo/-/fronthack-repo-2.1.12.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "gitHead": "c3eb0a5c0636de9ec7849e689d29ed10c538b3fd",
+  "homepage": "http://fronthack.com",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "bem",
+    "smacss",
+    "ui",
+    "framework",
+    "styleguide",
+    "gulp"
+  ],
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "maintainers": [
+    {
+      "name": "frontcraft",
+      "email": "michal@kokocinski.me"
+    }
+  ],
+  "name": "fronthack-repo",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontcraft/fronthack-repo.git"
+  },
+  "scripts": {
+    "purgestyleguide": "./src/bin/purge_styleguide.sh"
+  },
+  "version": "2.1.12"
+}

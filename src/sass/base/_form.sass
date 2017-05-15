@@ -1,0 +1,224 @@
+// Form
+//
+// Minimalistic, fully hackable form framework.
+
+
+// Basic inputs
+//
+// All types of text inputs, file inputs, selects, textarea and action button.
+
+
+// Radios and checkboxes
+//
+// Single and multi option lists.
+
+
+// Additional elements
+//
+// Help text below input and inside addon to hold icons that corresponds to
+// given field.
+
+
+// Fancy inputs
+//
+// More acttractive elements that improves user experience as an alternative form
+// basic inputs.
+
+
+// States
+//
+// Input states to communicate error, success or disabled input. Contains styles
+// for help text and inside addon.
+
+
+$form-item-width: 300px
+$form-item-height: 40px
+$form-item-margin: 30px
+$form-item-font-size: $font-size-base
+$form-item-bg: $gray-lighter
+
+// Block
+// --------------------------------------------------
+.form
+  margin: 0
+
+
+// Elements
+// --------------------------------------------------
+.form__item
+  margin: 0 0 $form-item-margin
+  position: relative
+  width: $form-item-width
+  overflow: visible
+  box-sizing: border-box
+  max-width: 100%
+  // Make form item full collumn width if is is composed in grid layout:
+  *[class^="col-"] > &,
+  *[class^="col-"] > .box > &
+    width: auto
+// Table layout integration
+td, th
+  &.form__item
+    margin: 0
+    padding: 0
+    vertical-align: middle
+
+
+.form__label
+  display: block
+  margin: 0
+  font-size: $font-size-small
+  text-transform: none
+  font-weight: $font-weight-bold
+
+
+.form__actions
+  margin-top: $form-item-margin * 3
+  button,
+  input[type="button"],
+  input[type="submit"]
+    margin: 0
+
+
+.form__input
+  width: 100%
+  margin: 0
+  border: 2px solid transparent
+  border-radius: 0
+  height: $form-item-height
+  line-height: $form-item-height - ($form-item-height/3)
+  padding: $form-item-height/6 10px
+  box-sizing: border-box
+  font-size: $form-item-font-size
+  transition: all 200ms ease-in
+  background-color: $form-item-bg
+  +placeholder($gray-light)
+  &[type=file]
+    line-height: $form-item-height * 0.45
+textarea.form__input
+  height: auto
+select.form__input
+  -webkit-appearance: none
+  padding-right: 30px
+  cursor: pointer
+  // Custom caret:
+  &:not([multiple])
+    background:
+      image: linear-gradient(45deg, transparent 50%, $text-color 50%), linear-gradient(135deg, $text-color 50%, transparent 50%)
+      position: calc(100% - 15px) $form-item-height/2-2px, calc(100% - 10px) $form-item-height/2-2px
+      size: 5px 5px, 5px 5px
+      repeat: no-repeat
+  &[multiple]
+    height: auto
+
+
+.form__checkbox,
+.form__radio
+  display: block
+
+
+.form__help
+  position: absolute
+  top: 100%
+  display: block
+  margin: 0
+  font-size: $font-size-xsmall
+  line-height: $font-size-xsmall * 1.5
+  color: lighten($text-color, 10%)
+
+
+.form__addon
+  position: absolute
+  top: $line-height-base
+  right: $form-item-height / 3
+  font-size: $form-item-font-size * 0.7
+  line-height: $form-item-height
+
+
+// Modifiers
+// --------------------------------------------------
+.form__item--inline
+  width: 100%
+  .form__checkbox,
+  .form__radio
+    display: inline-block
+    margin-right: 20px
+
+.form__item--fancy
+  .form__checkbox
+    input
+      position: relative
+      width: 36px
+      height: 14px
+      display: inline-block
+      background-color: $gray-light
+      margin: 0 5px 0 0
+      padding: 0
+      border-radius: 7px
+      -webkit-appearance: none
+      border: none
+      outline: 0
+      vertical-align: middle
+      transform: translateY(-1px)
+      cursor: pointer
+      &::after
+        content: ''
+        display: block
+        width: 20px
+        height: 20px
+        position: absolute
+        left: 0
+        top: -3px
+        background-color: $gray-lighter
+        border: 1px solid darken($gray-lighter, 5%)
+        border-radius: 10px
+        box-sizing: border-box
+      &:checked
+        background-color: $green
+        &::after
+          left: auto
+          right: 0
+
+
+// States
+// --------------------------------------------------
+.form__input:focus
+  border: 2px solid $brand-primary
+  box-shadow: none
+  outline-width: 0
+
+
+*[disabled]
+  opacity: 0.5
+  cursor: not-allowed
+input[disabled],
+textarea[disabled],
+select[disabled],
+*[disabled] input,
+*[disabled] textarea,
+*[disabled] select,
+*[disabled] .form__checkbox,
+*[disabled] .form__radio
+  pointer-events: none
+
+.form__item.is-success
+  .form__label,
+  .form__addon,
+  .form__help,
+  .form__checkbox,
+  .form__radio
+    color: darken($green, 5%)
+  .form__input:not(:focus)
+    border-color: lighten($green, 10%)
+
+
+.form__item.has-error
+  .form__label,
+  .form__addon,
+  .form__help,
+  .form__checkbox,
+  .form__radio
+    color: darken($red, 15%)
+  .form__input:not(:focus)
+    border-color: lighten($red, 15%)
+    background-color: lighten($red, 53%)

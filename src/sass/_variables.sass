@@ -1,0 +1,102 @@
+//
+// Bootstrap variables
+// --------------------------------------------------
+
+//== Colors
+//
+//## Global colors definitions.
+
+//** Gray scale declarations
+$gray-base: #101c27
+$gray-dark: #848181
+$gray-light: #d8d8d8
+$gray-lighter: #f5f6f8
+$gray-lightest: #fafafa
+$almost-white: #fdfdfd
+
+//** Color declarations
+$turquoise: #1fc59c
+$turquoise-light: #00ffac
+$green: #00a651
+$yellow: #ffd429
+$red: #e50038
+$orange: #ED7E00
+$navy-blue: #000080
+// Define new colors here: $blue, $orange, $dark-blue etc.
+
+//** Primary brand colors assigment
+$brand-primary: $turquoise
+$brand-primary-light: $turquoise-light
+
+//** Global styles color assigment
+$body-bg:          #ebebeb
+$text-color:       $gray-dark
+$link-color:       $gray-base
+$link-color-hover: lighten($link-color, 15%)
+
+
+//== Typography
+//
+//## Font, line-height, headings, and more.
+
+// Font families
+$font-family-serif: "Roboto Slab", Georgia, "Times New Roman", Times, serif
+$font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif
+$font-family-sans-condensed: "Roboto Condensed", Helvetica, Arial, sans-serif
+$font-family-base: $font-family-sans-serif
+$font-family-headings: $font-family-serif
+$font-family-paragraphs: $font-family-serif
+
+// Font sizes
+$font-size-xsmall: 12px
+$font-size-small: 14px
+$font-size-base: 16px
+$font-size-large: 24px
+
+$font-size-h1: 80px
+$font-size-h2: 30px
+$font-size-h3: 20px
+$font-size-h4: 16px
+
+// Line height and bottom margin tutej zmieniaj marginy
+$line-height-base: 26px
+$paragraphs-margin: $line-height-base
+
+// Font weights
+$font-weight-thin: 200
+$font-weight: 300
+$font-weight-bold: 500
+$font-weight-bold-serif: 700
+
+
+//== Media queries and breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs-min:              0
+// Small screen / tablet
+$screen-sm-min:              48em
+// Medium screen / desktop
+$screen-md-min:              62em
+// Large screen / wide desktop
+$screen-lg-min:              75em
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1)
+$screen-sm-max:              ($screen-md-min - 1)
+$screen-md-max:              ($screen-lg-min - 1)
+
+
+//== Configuration for built in Flexbox Grid
+//
+//## https://github.com/hugeinc/flexboxgrid-sass#use
+
+// Set the gutter between columns
+$gutter-width: 1rem
+// Set a margin for the container sides
+$outer-margin: 1.5rem
+// Apply breakpoints configuration to Flexbox
+$breakpoints: sm $screen-sm-min 46rem, md $screen-md-min 61rem, lg $screen-lg-min 71rem
+// Set max page width
+$flexboxgrid-max-width: 1000px
